@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+{% block content %}
+
+<br>
+<br>
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>ECE Academic Project Training</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="fade-up" data-aos-delay="200">
+              <img src="{% static 'home_app/assets/img/values-1.png' %}" class="img-fluid" alt="">
+              <h3>Embedded Systems</h3>
+        
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="400">
+              <img src="{% static 'home_app/assets/img/values-2.png' %}" class="img-fluid" alt="">
+              <h3>VLSI</h3>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+              <img src="{% static 'home_app/assets/img/values-3.png' %}" class="img-fluid" alt="">
+              <h3>IOT/Robotics</h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Values Section -->
+
+        <div class="row">
+
+              <div class="panel-body">
+                <table class="table bootstrap-datatable ">
+                  <thead>
+                    <tr class="text-center">
+                      <th>Project ID No.</th>
+                      <th>Project Title</th>
+                      <th>Platform used</th>
+                      <th>Branches</th>
+                      <th>Abstract</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in ece %}
+                      <tr>
+                        <td class="text-center">{{i.project_id}}</td>
+                        <td class="text-left">{{i.title}}</td>
+                        <td class="text-left">{{i.platform1}}, {{i.platform2}}, {{i.platform3}}</td>
+                        <td class="text-left">{{i.branch1}}, {{i.branch2}}, {{i.branch3}}</td>
+                        <td class="text-center">{% if i.upload %}
+                               <a href="{{i.upload.url}}" class="btn btn-primary" role="button">Download</a>
+                            {% endif %}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+
+{% endblock %}

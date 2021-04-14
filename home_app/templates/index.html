@@ -1,0 +1,403 @@
+{% extends 'base.html' %}
+{% load static %}
+  
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Anjam Technology</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Support to customise your life with Technology.</h2>
+          <h2 data-aos="fade-up" data-aos-delay="400" align="justify" style="text-align:justify">Anjam Technology provide consultancy, is NOT about sales and isn’t about pushing a product or service. Instead, Anjam Technology is about sharing your knowledge, requirement and providing something of technical value to our clients.</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'home_app/assets/img/hero-img.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-12 d-flex flex-column justify-content-center"       data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Who We Are</h3>
+              <h2>Support to customise your life with Technology.</h2>
+              <p align="justify" style="text-align:justify">
+                Established in 2019, Anjam Technology offers Custom Electronic Product Design, PCB Design, Embedded Systems Design, IOT, Firmware & Software programming, Prototyping & Manufacturing services covering a wide area in the Electronics and Software domain.<span id="points">...</span>
+
+              <span id="moreText">your small & large volume production. Anjam Technology has completed over 100 medium to complex designs till date and innumerable small sized designs.<br><br>Anjam Technology is popular
+              for making the designs low cost (for manufacturing), with minimum number of parts per board, while providing high quality of services and support. We believe in “keeping things simple” hence the costs involved are very affordable. You
+              should choose Anjam Technology for its affordable costs, fast turn around time & top quality service and support.<br><br> We can handle both big and small projects, be it for big industries or for small businesses & individuals. we are
+              offering quality services to customers from across the India.</span>
+              </p>
+              <button onclick="toggleText()" id="textButton" class="btn btn-primary">Show more</button>
+
+                <script>
+                  function toggleText() {
+
+                    var points =
+                      document.getElementById("points");
+
+                    var showMoreText =
+                      document.getElementById("moreText");
+
+                    var buttonText =
+                      document.getElementById("textButton");
+                    if (points.style.display === "none") {
+                      showMoreText.style.display = "none";
+                      points.style.display = "inline";
+                       buttonText.innerHTML = "Show More";
+                      }
+                    else {
+                      showMoreText.style.display = "inline";
+                      points.style.display = "none";
+                      buttonText.innerHTML = "Show Less";
+                    }
+                  }
+                </script>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Academic Projects</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <a href="{% url 'ece' %}">
+              <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <img src="{% static 'home_app/assets/img/values-1.png' %}" class="img-fluid" alt="ECE Projects">
+                <h3>ECE Projects</h3>
+          
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <a href="{% url 'cse' %}">
+              <div class="box" data-aos="fade-up" data-aos-delay="400">
+                <img src="{% static 'home_app/assets/img/values-2.png' %}" class="img-fluid" alt="">
+                <h3>CSE/IT Projects</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <a href="{% url 'eee' %}">
+              <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <img src="{% static 'home_app/assets/img/values-3.png' %}" class="img-fluid" alt="">
+                <h3>EEE Projects.</h3>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Values Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Services</p>
+          <h4>Anjam Technology is a trusted company that provides a wide array of Electronics and Software Design and Development Services with almost 8 years of experience in the relevant areas.</h4>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Electronics Design Services</h3>
+              <p align="justify" style="text-align:justify">Anjam Technology offers customized Electronic Design Services including PCB Design, Prototyping & Manufacturing Services covering a wide area in the electronics domain.Experts in
+                  customized Electronic Product Design..</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box orange">
+              <i class="ri-discuss-line icon"></i>
+              <h3>3D Printing</h3>
+              <p align="justify" style="text-align:justify">We provide customize 3D packaging prototypes and share them with your design team and clients, Our products & services, based on our online collaborative 3D technology, digitize the
+                  packaging customization and validation process.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box green">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Custom software development</h3>
+              <p align="justify" style="text-align:justify">custom software development to develop and deploy complex technology solutions
+                  to our customers world-wide. Our agile development methodology, combined with our design thinking and strategic consulting,
+                  enables customers solve their critical digital challenges on time, and within their budget</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box red">
+              <i class="ri-discuss-line icon"></i>
+              <h3>CCTV Services</h3>
+              <p align="justify" style="text-align:justify">We offer a wide range of Axis Communication CCTV cameras, as well as video encoders, video management software, camera applications, and a large selection of accessories. We can design a
+                  customized CCTV security system to fit any size budget, and we have the professional expertise to recommend the exact product and system for your specific needs. We can deliver an integrated CCTV solution for any challenge you may
+                  face, from single cameras, to multi-level surveillance, and remote management. Give us the opportunity to show you how cost effective a CCTV System can be, and have the peace of mind in knowing your property is safe and secure.
+                  Request a free analysis and quote today.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box purple">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Academic Project Training</h3>
+              <p align="justify" style="text-align:justify">We are providing academic project solutions and Internship Training, 12 years of experience with perfect infrastructure, lab set up, work shop, Expertise faculties make us competitive
+                  service providers in the field og Academic projects and Internships in Banaglore. We offer final year academic
+                  projects for all branches of Engineering, Diploma and M- Tech students. All the projects are developed according to IEEE and university standards. Expertise in Software, Embedded and Mechanical project fabrication. Projects
+                  available for CSE, ISE, ECE, EEE, TELECOM, MECHANICAL and BIO- MEDICAL students.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box pink">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Learning Solution</h3>
+              <p align="justify" style="text-align:justify">Organized workshops in more than 800+ colleges and trained more than 1,00,000+ students, Anjam Technology is very well known companies in India's cream colleges like IIT Bombay, IIT
+                  Kanpur, IIT Roorkee, IIT Delhi, IIT Hyderabad, IIT Bhubaneshwar, NIT's and Top Deemed Universities of India.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Blog</h2>
+          <p>Recent posts form our Blog</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="{% static 'home_app/assets/img/blog/blog-1.jpg' %}" class="img-fluid" alt=""></div>
+              <span class="post-date">Tue, September 15</span>
+              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
+              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="{% static 'home_app/assets/img/blog/blog-2.jpg' %}" class="img-fluid" alt=""></div>
+              <span class="post-date">Fri, August 28</span>
+              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
+              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="{% static 'home_app/assets/img/blog/blog-3.jpg' %}" class="img-fluid" alt=""></div>
+              <span class="post-date">Mon, July 11</span>
+              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
+              <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Recent Blog Posts Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>Sriram Nagar Street,<br>Sanivarapupeta, Eluru-534003</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 8463 9033 16<br>+91 8463 9033 16</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@anjamtechnology.com<br>contact@anjamtechnology.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="{% url 'home' %}" method="post" class="php-email-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="mobile" placeholder="Your mobile number" required>
+                </div>
+
+                <div class="col-md-12 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock %}
